@@ -4,7 +4,7 @@
   <arg name="online" default="true" />
   <arg name="log_output" default="true"/>
   <arg name="rosbag_path" default="path" />
-  <arg name="config_type" default="D455" />
+  <arg name="config_type" default="D457" />
   <arg name="robot_id" default="0" />
 
   <arg name="do_coarse_temporal_sync" default="false"/>
@@ -14,15 +14,15 @@
   <arg name="lcd_no_optimize" default="false"/>
   <arg name="lcd_no_detection" default="false"/>
 
-  <arg name="visualize"    default="true" />
+  <arg name="visualize"    default="false" />
   <!-- Type of visualization: 0: 2d3d_mesh, 1: pointcloud, 2: none -->
-  <arg name="viz_type"     default="1" />
+  <arg name="viz_type"     default="2" />
   <!-- Use Rviz for visualization or OpenCV -->
   <arg name="use_rviz"     default="true"/>
 
   <!-- Other settings -->
   <arg name="log_gt_data" default="true"/>
-  <arg name="should_use_sim_time" default="false"/>
+  <arg name="should_use_sim_time" default="true"/>
   <arg name="params_folder" value="$(find kimera_vio)/params/$(arg config_type)"/>
   <!-- <arg name="sensor_folder" value="$(arg params_folder)"/> -->
   <arg if="$(arg log_output)" name="log_output_path" value="$(find kimera_vio_ros)/output_logs/$(arg config_type)"/>
